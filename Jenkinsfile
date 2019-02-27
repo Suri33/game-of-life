@@ -13,6 +13,11 @@
             sh 'mvn package'	  
 	  }
 	   
+	   stage ('Artifacory')
+	         {
+             archiveArtifacts 'gameoflife-core/target/*.jar'             
+			 }
+	   
 	        
 		 stage ( 'Sonar Qube')
 		 {
