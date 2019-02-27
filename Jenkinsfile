@@ -13,12 +13,7 @@
             sh 'mvn package'	  
 	  }
 	   
-	   stage ('Archive Artifactory')
-	   { 
-	       
-		   archiveArtifacts 'target/*.jar'
-	   }
-	     
+	        
 		 stage ( 'Sonar Qube')
 		 {
 
